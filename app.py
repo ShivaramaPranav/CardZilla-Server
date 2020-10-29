@@ -9,6 +9,7 @@ from models.boardSlot import BoardSlot
 from db import db
 
 import random
+import os
 
 app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://root:password@db:5432/flaskJWT"
