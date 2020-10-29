@@ -63,8 +63,8 @@ def initializeBoard():
             value = COLORS[j] + str(i)
             card = DeckCard(value, 2, game.id)
             card.save_to_db()
-    jack1 = DeckCard("j1", 4, game.id)
-    jack2 = DeckCard("j2", 4, game.id)
+    jack1 = DeckCard("w", 4, game.id)
+    jack2 = DeckCard("n", 4, game.id)
     jack1.save_to_db()
     jack2.save_to_db()
 
@@ -157,8 +157,6 @@ def updateBoard():
         slot.playerId = None
     slot.save_to_db()
 
-    if action == "remove":
-        return
 
     # vertical
     vertical = []
