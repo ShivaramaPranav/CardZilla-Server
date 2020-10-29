@@ -12,7 +12,8 @@ import random
 
 app = Flask(__name__)
 # app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://root:password@db:5432/flaskJWT"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 GAMEBOARD = [["x", "y3", "y4", "r5", "r6", "x"],
              ["r4", "b2", "b1", "y4", "r7", "g1"],
              ["r3", "b3", "y5", "b7", "y3", "g2"],
